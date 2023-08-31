@@ -1,0 +1,25 @@
+.row-fluid
+  .span10.offset1
+    .hero-unit
+      h1 style="text-align: center;" = "Admin Dashboard"
+      p = "Welcome to the Admin Dashboard!"
+
+    h2 = "Users"
+    ul
+      - @users.each do |user|
+        li = link_to user.email, admin_dashboard_path(user)
+
+    h2 = "Todo Lists"
+    ul
+      - @todo_lists.each do |todo_list|
+        li = link_to todo_list.title, admin_todo_list_path(todo_list)
+
+        .todo-list-details
+          h3 = todo_list.title
+          p = todo_list.description
+
+  = link_to "New Todo List", new_todo_list_path, class: "btn btn-primary"
+
+
+
+

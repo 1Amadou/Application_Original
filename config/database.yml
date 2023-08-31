@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+
+  #to run locally, change it to localhost
+  host: <%= ENV.fetch("POSTGRES_HOST") { 'localhost' }%>
+
+  encoding: unicode
+  username: localhost
+  password: root
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: todo_development
+
+test:
+  <<: *default
+  database: todo_test
+
+production:
+  <<: *default
+  database: todo_production
+  username: todo
+  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>

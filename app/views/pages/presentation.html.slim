@@ -1,0 +1,41 @@
+.container
+  .row
+    .col-md-8.offset-md-2
+      .hero-section
+        h1.text-center = @title
+        p.text-center = @description
+
+      .service-info
+        .section-heading
+          h2.text-center Les Grandes Lignes de Notre Service
+        p.text-center
+          | L'application Task Master vous permet de gérer vos tâches de manière efficace
+          | en organisant vos listes de tâches et en suivant votre progression.
+
+        .section-heading
+          h2.text-center Le Concept derrière l'Application
+        p.text-center
+          | Task Master a pour objectif de simplifier la gestion de vos tâches quotidiennes.
+          | Elle vous offre une plate-forme conviviale pour créer, éditer et marquer vos tâches comme terminées.
+
+        .section-heading
+          h2.text-center Fonctionnalités Clés
+        ul.text-center
+          li Créez facilement des listes de tâches et des tâches individuelles.
+          li Marquez vos tâches comme complètes pour suivre votre progression.
+          li Gérez vos listes de tâches en les organisant et en les réorganisant.
+          li Interface intuitive et conviviale pour une expérience utilisateur optimale.
+
+      .cta-section
+        .row.text-center
+          .col-md-6.offset-md-3
+            hr
+            p.text-center Envie de commencer dès maintenant avec Task Master ?
+            = link_to "Sign Up", new_user_registration_path, class: "btn btn-success btn-lg btn-block mt-3"
+            = link_to "Log In", new_user_session_path, class: "btn btn-success btn-lg btn-block mt-2"
+
+      .contact-section
+        .row.text-center
+          .col-md-6.offset-md-3
+            hr
+            p.text-center Vous avez des questions ? Contactez-nous à contact@taskmasterapp.com

@@ -1,0 +1,13 @@
+h1 Todo Lists
+table
+  tr
+    th Title
+    th Description
+    th Actions
+  - @todo_lists.each do |todo_list|
+    tr
+      td = todo_list.title
+      td = todo_list.description
+      td = link_to 'Edit', edit_admin_todo_list_path(todo_list)
+      td = link_to 'Delete', admin_todo_list_path(todo_list), method: :delete, data: { confirm: 'Are you sure?' }
+
