@@ -10,7 +10,7 @@ Ruby on Rails 6.0.3
 ## Procédure d'Exécution
 
 1. Clonez ce dépôt sur votre machine locale :
-   git clone https://github.com/1Amadou/Task_Master.git
+   git clone https://github.com/1Amadou/Application_Original.git
 
 Installer les dépendances :   bundle install
    
